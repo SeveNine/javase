@@ -6,13 +6,15 @@ java的第一个程序
 
 `{`
 
-        `public static void main (String args[])`
+```
+    public static void main (String args[])
 
-        `{`
+    {
 
-                `System.out.println("HelloWorld");`
+            System.out.println("HelloWorld");
 
-        `}`
+    }
+```
 
 `}`
 
