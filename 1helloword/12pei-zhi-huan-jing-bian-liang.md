@@ -36,5 +36,7 @@ PATH  = %JAVA\_HOME%/bin;%JAVA\_HOME%/jre/bin
 
 因为PATH和CLASSPATH都使用到了JAVA\_HOME，也可以使用绝对路径，两者皆可。
 
+在doc中直接打指令set path=xxx为临时配置环境变量，只在当前窗口有效。
+
 **不要一味的照搬，理解最重要。**
 
