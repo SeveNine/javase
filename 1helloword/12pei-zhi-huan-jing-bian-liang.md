@@ -6,13 +6,13 @@
 
 首先配置
 
-**PATH**：jdk安装目录下的bin目录（环境变量间用；隔开，位置越在前面越快被找到）
+**PATH**：jdk安装目录下的bin目录（环境变量间用；隔开，位置越在前面越快被找到）。
 
 * 例如C:/Program Files/Java/jdk9.0.1/bin
 
 * 在cmd中任意目录运行一个程序（javac）的时候系统在当前目录找不到程序（javac.exe），然后系统就会去path环境变量中寻找。
 
-**JAVA\_HOME**：jdk的安装目录，方便修改与供使用
+**JAVA\_HOME**：jdk的安装目录，方便修改与供使用。
 
 * 例如：C:/Program Files/Java/jdk9.0.1
 
@@ -32,9 +32,9 @@ JAVA\_HOME = C:/Program Files/Java/jdk9.0.1
 
 PATH  = %JAVA\_HOME%/bin;%JAVA\_HOME%/jre/bin
 
+%变量名%，为动态获取某一环境变量的值。
+
 因为PATH和CLASSPATH都使用到了JAVA\_HOME，也可以使用绝对路径，两者皆可。
 
 **不要一味的照搬，理解最重要。**
-
-
 
