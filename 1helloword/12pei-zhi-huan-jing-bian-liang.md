@@ -10,7 +10,7 @@
 
 * 例如C:/Program Files/Java/jdk9.0.1/bin
 
-* 在cmd中任意目录运行一个程序（javac）的时候系统在当前目录找不到程序（javac.exe），然后系统就会去path环境变量中寻找。
+* 在dos中任意目录运行一个程序（javac）的时候系统在当前目录找不到程序（javac.exe），然后系统就会去path环境变量中寻找。
 
 **JAVA\_HOME**：jdk的安装目录，方便修改与供使用。
 
