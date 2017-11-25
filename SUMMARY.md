@@ -10,4 +10,6 @@
   * [1.5dos常用命令](1helloword/11doschang-yong-ming-ling.md)
 * [2.java语言基础](2javayu-yan-ji-chu.md)
   * [2.1关键字](2javayu-yan-ji-chu/21.md)
+  * [2.2标识符](2javayu-yan-ji-chu/22biao-shi-fu.md)
+  * [2.3常量与变量](2javayu-yan-ji-chu/23chang-liang-yu-bian-liang.md)
 
