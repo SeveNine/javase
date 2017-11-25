@@ -15,20 +15,11 @@
 
 ##### JDK,JRE,JVM
 
-* JDK:JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包 括了JRE。所以安装了JDK，就不用在单独安装JRE了。 
+* JDK（Java Development Kit）是针对Java开发员的产品，是整个Java的核心，包括了Java运行环境JRE、Java工具和Java基础类库。其中的开发工具：编译工具\(javac.exe\) 打包工具\(jar.exe\)等。
 
-* JRE:包括Java虚拟机\(JVM Java Virtual Machine\)和Java程序所需的核心类 库等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE 即可。
+* JRE\(Java Runtime Environment\)是运行JAVA程序所必须的环境的集合，包含JVM标准实现及Java核心类库,如果想要运行一个开发好的Java程序，计算机中只需要安装JRE 即可。
 
-* JDK（Java Development Kit）是针对Java开发员的产品，是整个Java的核心，包括了Java运行环境JRE、Java工具和Java基础类库。其中的开发工具：编译工具\(javac.exe\) 打包工具\(jar.exe\)等
-
-
-
-  JRE\(Java Runtime Environment\)是运行JAVA程序所必须的环境的集合，包含JVM标准实现及Java核心类库。
-
-  
-
-
-  JVM是Java Virtual Machine（Java虚拟机）的缩写，是整个java实现跨平台的最核心的部分，能够运行以Java语言写作的软件程序。
+* JVM（Java Virtual Machine（Java虚拟机）），是整个java实现跨平台的最核心的部分，能够运行以Java语言写作的软件程序。
 
 
 
