@@ -2,8 +2,6 @@
 
 **win+r，输入cmd快速打开dos**
 
-
-
 dir：列出当前目录下的文件及文件夹
 
 md：创建目录
@@ -23,4 +21,6 @@ exit：退出dos命令行
 calc：计算器
 
 mspaint：画图
+
+shutdown：定时关机睡眠等，例如shutdown -s -t 7200，将在7200秒后关机
 
