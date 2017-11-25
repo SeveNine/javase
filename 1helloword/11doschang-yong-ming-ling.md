@@ -1,6 +1,6 @@
 ### dos常用命令
 
-win+r，输入cmd快速打开dos
+**win+r，输入cmd快速打开dos**
 
 
 
