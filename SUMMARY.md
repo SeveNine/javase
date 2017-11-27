@@ -13,4 +13,5 @@
   * [2.3注释](1helloword/14zhu-shi.md)
   * [2.4常量与变量](2javayu-yan-ji-chu/23chang-liang-yu-bian-liang.md)
   * [2.5运算符](2javayu-yan-ji-chu/25.md)
+  * [2.6程序流程控制](2javayu-yan-ji-chu/26san-zhong-xun-huan-fen-zhi-jie-gou.md)
 
