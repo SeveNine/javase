@@ -12,5 +12,5 @@
   * [2.2标识符](2javayu-yan-ji-chu/22biao-shi-fu.md)
   * [2.3注释](1helloword/14zhu-shi.md)
   * [2.4常量与变量](2javayu-yan-ji-chu/23chang-liang-yu-bian-liang.md)
-  * [2.5运算符](2javayu-yan-ji-chu/25yun-suan-fu.md)
+  * [2.5运算符](2javayu-yan-ji-chu/25.md)
 
