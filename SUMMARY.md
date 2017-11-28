@@ -21,4 +21,5 @@
   * [3.2类与对象](3mian-xiang-dui-xiang/32lei-yu-dui-xiang-de-guan-xi.md)
   * [3.3封装](3mian-xiang-dui-xiang/33feng-zhuang.md)
   * [3.4构造函数](3mian-xiang-dui-xiang/34gou-zao-han-shu.md)
+  * [3.5this关键字](3mian-xiang-dui-xiang/35thisguan-jian-zi.md)
 
