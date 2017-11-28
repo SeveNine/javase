@@ -18,5 +18,6 @@
   * [2.8数组](2javayu-yan-ji-chu/28shu-zu-xin.md)
 * [3.面向对象](3mian-xiang-dui-xiang.md)
   * [3.1面向对象概念](3mian-xiang-dui-xiang/31mian-xiang-dui-xiang-gai-nian.md)
-  * [3.2类与对象的关系](3mian-xiang-dui-xiang/32lei-yu-dui-xiang-de-guan-xi.md)
+  * [3.2类与对象](3mian-xiang-dui-xiang/32lei-yu-dui-xiang-de-guan-xi.md)
+  * [3.3封装](3mian-xiang-dui-xiang/33feng-zhuang.md)
 
