@@ -57,33 +57,24 @@ class Person
     Person()
     {
         System.out.println("A: name="+name+",,age="+age);
-
+        //cry();构造代码块中已经有了
     }
     //构造函数的重载，带自定义名字的人
     Person(String n)
     {
         name = n;
         System.out.println("B: name="+name+",,age="+age);
-
         //cry();构造代码块中已经有了
 
     }
-    /*
-    public void setName(String n)
-    {
-        name  = n;
-    }
-    public String getName()
-    {
-        return name;
-    }
-    */
     Person(String n,int a)
     {
         name = n;
         age = a;
         System.out.println("C: name="+name+",,age="+age);
-        //cry();
+        //cry();构造代码块中已经有了
+
+
     }
 
     public void cry()
