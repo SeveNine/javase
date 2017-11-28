@@ -9,6 +9,7 @@ static关键字：
 * 随着类的加载而加载
 
 * 优先于对象存在
+
 * 被所有对象所共享
 * 可以直接被类名调用
 
@@ -17,6 +18,7 @@ static关键字：
 * 静态方法只能访问静态成员
 
 * 静态方法中不可以写this，super关键字
+
 * 主函数是静态的
 
 ```
@@ -38,50 +40,46 @@ static特点：
 
 实例变量和类变量的区别：
 1，存放位置。
-	类变量随着类的加载而存在于方法区中。
-	实例变量随着对象的建立而存在于堆内存中。
+    类变量随着类的加载而存在于方法区中。
+    实例变量随着对象的建立而存在于堆内存中。
 2，生命周期：
-	类变量生命周期最长，随着类的消失而消失。
-	实例变量生命周期随着对象的消失而消失。
-
-
+    类变量生命周期最长，随着类的消失而消失。
+    实例变量生命周期随着对象的消失而消失。
 
 静态使用注意事项：
 1，静态方法只能访问静态成员。
-	非静态方法既可以访问静态也可以访问非静态。
+    非静态方法既可以访问静态也可以访问非静态。
 2，静态方法中不可以定义this，super关键字。
-	因为静态优先于对象存在。所以静态方法中不可以出现this。
+    因为静态优先于对象存在。所以静态方法中不可以出现this。
 3，主函数是静态的。
-	
-
 
 静态有利有弊
 利处：对对象的共享数据进行单独空间的存储，节省空间。没有必要每一个对象中都存储一份。
-	可以直接被类名调用。
+    可以直接被类名调用。
 弊端：生命周期过长。
-	  访问出现局限性。(静态虽好，只能访问静态。)
+      访问出现局限性。(静态虽好，只能访问静态。)
 */
 
 class Person
 {
-	String name;//成员变量，实例变量。
-	static String country = "CN";//静态的成员变量，类变量。
-	public static void show()
-	{
-		System.out.println("::::");
-		this.haha();
-	}
-	public void haha()
-	{}
+    String name;//成员变量，实例变量。
+    static String country = "CN";//静态的成员变量，类变量。
+    public static void show()
+    {
+        System.out.println("::::");
+        this.haha();
+    }
+    public void haha()
+    {}
 }
 
 class  StaticDemo
 {
-	public static void main(String[] args) 
-	{
-		Person p = new Person();
-		Person.show();
-	}
+    public static void main(String[] args) 
+    {
+        Person p = new Person();
+        Person.show();
+    }
 }
 ```
 
