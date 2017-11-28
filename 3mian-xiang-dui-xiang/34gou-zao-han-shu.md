@@ -73,13 +73,10 @@ class Person
         age = a;
         System.out.println("C: name="+name+",,age="+age);
         //cry();构造代码块中已经有了
-
-
     }
 
     public void cry()
     {
-
         System.out.println("cry......");
     }
 }
@@ -90,15 +87,7 @@ class  PersonDemo2
     {
         Person p1 = new Person();
 
-
-
         Person p2 = new Person("lisi");
-
-        //System.out.println(p2.getName());
-
-        //Person p3 = new Person("wnagu",10);
-
-
     }
 }
 ```
