@@ -1,6 +1,6 @@
 ## 构造函数
 
- 特点：
+特点：
 
 * 函数名与类名相同
 * 不用定义返回值类型
@@ -36,79 +36,79 @@
 
 class Person
 {
-	private String name;
-	private int age;
-	
-	/*
-	构造代码块。
-	作用：给对象进行初始化。
-	对象一建立就运行，而且优先于构造函数执行。
-	和构造函数的区别：
-	构造代码块是给所有对象进行统一初始化，
-	而构造函数是给对应的对象初始化。
+    private String name;
+    private int age;
 
-	构造代码快中定义的是不同对象共性的初始化内容。
+    /*
+    构造代码块。
+    作用：给对象进行初始化。
+    对象一建立就运行，而且优先于构造函数执行。
+    和构造函数的区别：
+    构造代码块是给所有对象进行统一初始化，
+    而构造函数是给对应的对象初始化。
 
-	*/
-	{
-		cry();
-	}
+    构造代码快中定义的是不同对象共性的初始化内容。
 
-	Person()
-	{
-		System.out.println("A: name="+name+",,age="+age);
-		
-	}
-	//构造函数的重载，带名字的人
-	Person(String n)
-	{
-		name = n;
-		System.out.println("B: name="+name+",,age="+age);
+    */
+    {
+        cry();
+    }
 
-		//cry();构造代码块中已经有了
-		
-	}
-	/*
-	public void setName(String n)
-	{
-		name  = n;
-	}
-	public String getName()
-	{
-		return name;
-	}
-	*/
-	Person(String n,int a)
-	{
-		name = n;
-		age = a;
-		System.out.println("C: name="+name+",,age="+age);
-		//cry();
-	}
+    Person()
+    {
+        System.out.println("A: name="+name+",,age="+age);
 
-	public void cry()
-	{
-		
-		System.out.println("cry......");
-	}
+    }
+    //构造函数的重载，带自己起的名字的人
+    Person(String n)
+    {
+        name = n;
+        System.out.println("B: name="+name+",,age="+age);
+
+        //cry();构造代码块中已经有了
+
+    }
+    /*
+    public void setName(String n)
+    {
+        name  = n;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    */
+    Person(String n,int a)
+    {
+        name = n;
+        age = a;
+        System.out.println("C: name="+name+",,age="+age);
+        //cry();
+    }
+
+    public void cry()
+    {
+
+        System.out.println("cry......");
+    }
 }
 
 class  PersonDemo2
 {
-	public static void main(String[] args) 
-	{
-		Person p1 = new Person();
+    public static void main(String[] args) 
+    {
+        Person p1 = new Person();
 
-		
 
-		Person p2 = new Person("lisi");
-	
-		//System.out.println(p2.getName());
 
-		//Person p3 = new Person("wnagu",10);
-	
-		
-	}
+        Person p2 = new Person("lisi");
+
+        //System.out.println(p2.getName());
+
+        //Person p3 = new Person("wnagu",10);
+
+
+    }
 }
 ```
 
