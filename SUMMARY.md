@@ -16,4 +16,5 @@
   * [2.6程序流程控制](2javayu-yan-ji-chu/26san-zhong-xun-huan-fen-zhi-jie-gou.md)
   * [2.7函数](2javayu-yan-ji-chu/27han-shu.md)
   * [2.8数组](2javayu-yan-ji-chu/28shu-zu.md)
+  * [2.8数组新](2javayu-yan-ji-chu/28shu-zu-xin.md)
 
