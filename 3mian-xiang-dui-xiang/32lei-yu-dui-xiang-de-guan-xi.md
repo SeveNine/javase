@@ -54,15 +54,13 @@ void show()
     class CarDemo
 {
     public static void main(String[] args)
-{
-    Car c = new Car();//建立对象
-    c.color = "black";//对对象的属性进行修改
-    c.show();//使用对象的功能。
-}
+    {
+        Car c = new Car();//建立对象
+        c.color = "black";//对对象的属性进行修改
+        c.show();//使用对象的功能。
+    }
 }
 ```
-
-
 
 
 
