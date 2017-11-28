@@ -12,7 +12,9 @@
 
 {
 
-    执行语句; return 返回值;
+```
+执行语句; return 返回值;
+```
 
 }
 
@@ -60,7 +62,9 @@ int getSum\(int x,int y\)
 
 {
 
-    return x+y;
+```
+return x+y;
+```
 
 }
 
@@ -74,35 +78,39 @@ int getSum\(int x,int y\)
 
 例如：
 
- //返回两个整数的和
+//返回两个整数的和
 
- int add\(int x,int y\)
-
-{
-
-    return x+y;
-
-} 
-
-//返回三个整数的和 
-
-int add\(int x,int y,int z\)
+int add\(int x,int y\)
 
 {
 
-    return x+y+z;
+```
+return x+y;
+```
 
-} 
+}
 
-//返回两个小数的和 
+//返回三个整数的和
+
+ int add\(int x,int y,int z\)
+
+ {
+
+```
+return x+y+z;
+```
+
+ }
+
+//返回两个小数的和
 
 double add\(double x,double y\)
 
 {
 
-    return x+y;
+```
+return x+y;
+```
 
 }
-
-
 
