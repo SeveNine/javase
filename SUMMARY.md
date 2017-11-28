@@ -22,5 +22,5 @@
   * [3.3封装](3mian-xiang-dui-xiang/33feng-zhuang.md)
   * [3.4构造函数](3mian-xiang-dui-xiang/34gou-zao-han-shu.md)
   * [3.5this关键字](3mian-xiang-dui-xiang/35thisguan-jian-zi.md)
-  * [3.6static关键字](3mian-xiang-dui-xiang/36staticguan-jian-zi.md)
+  * [3.6static关键字（多）](3mian-xiang-dui-xiang/36staticguan-jian-zi.md)
 

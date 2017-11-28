@@ -154,8 +154,6 @@ class
 
 可以通过将构造函数私有化完成。
 
-
-
 接下来，将ArrayTool.class文件发送给其他人，其他人只要将该文件设置到classpath路径下，就可以使用该工具类。
 
 但是，很遗憾，该类中到底定义了多少个方法，对方去不清楚。因为该类并没有使用说明书。
@@ -176,102 +174,102 @@ class
 
 public class ArrayTool
 {
-	/**
-	空参数构造函数。
-	*/
-	private ArrayTool(){}
+    /**
+    空参数构造函数。
+    */
+    private ArrayTool(){}
 
-	/**
-	获取一个整形数组中的最大值。
-	@param arr 接收一个int类型的数组。
-	@return 会返回一个该数组中最大值。
-	*/
-	public static int getMax(int[] arr)
-	{
-		int max = 0;
-		for(int x=1; x<arr.length; x++)
-		{
-			if(arr[x]>arr[max])
-				max = x;
-		}
-		return arr[max];
-	}
-	
-	/**
-	获取一个整形数组中的最小值。
-	@param arr 接收一个int类型的数组。
-	@return 会返回一个该数组中最小值。
-	*/
-	public static int getMin(int[] arr)
-	{
-		int min = 0;
-		for(int x=1; x<arr.length; x++)
-		{
-			if(arr[x]<arr[min])
-				min = x;
-		}
-		return arr[min];
-	}
-	/**
-	给int数组进行选择排序。
-	@param arr 接收一个int类型的数组。
-	*/
-	public static void selectSort(int[] arr)
-	{
-		for (int x=0; x<arr.length-1 ; x++ )
-		{
-			for(int y=x+1; y<arr.length; y++)
-			{
-				if(arr[x]>arr[y])
-				{
-					swap(arr,x,y);
-				}
-			}
-		}
-	}
-	/**
-	给int数组进行冒泡排序。
-	@param arr 接收一个int类型的数组。
-	*/
-	public static void bubbleSort(int[] arr)
-	{
-		for (int x=0; x<arr.length-1 ; x++ )
-		{
-			for(int y=0; y<arr.length-x-1; y++)
-			{
-				if(arr[y]>arr[y+1])
-				{
-					swap(arr,y,y+1);
-				}
-			}
-		}
-	}
-	/**
-	给数组中元素进行位置的置换。
-	@param arr  接收一个int类型的数组。
-	@param a 要置换的位置 
-	@param b 要置换的位置 
-	*/
-	private  static void swap(int[] arr,int a,int b)
-	{
-		int temp = arr[a];
-		arr[a] = arr[b];
-		arr[b] = temp;
-	}
-	/**
-	用于打印数组中的元素。打印形式是：[elemet1, element2, ...]
-	*/
-	public static void printArray(int[] arr)
-	{
-		System.out.print("[");
-		for(int x=0; x<arr.length; x++)
-		{
-			if(x!=arr.length-1)
-				System.out.print(arr[x]+", ");
-			else
-				System.out.println(arr[x]+"]");
-		}
-	}
+    /**
+    获取一个整形数组中的最大值。
+    @param arr 接收一个int类型的数组。
+    @return 会返回一个该数组中最大值。
+    */
+    public static int getMax(int[] arr)
+    {
+        int max = 0;
+        for(int x=1; x<arr.length; x++)
+        {
+            if(arr[x]>arr[max])
+                max = x;
+        }
+        return arr[max];
+    }
+
+    /**
+    获取一个整形数组中的最小值。
+    @param arr 接收一个int类型的数组。
+    @return 会返回一个该数组中最小值。
+    */
+    public static int getMin(int[] arr)
+    {
+        int min = 0;
+        for(int x=1; x<arr.length; x++)
+        {
+            if(arr[x]<arr[min])
+                min = x;
+        }
+        return arr[min];
+    }
+    /**
+    给int数组进行选择排序。
+    @param arr 接收一个int类型的数组。
+    */
+    public static void selectSort(int[] arr)
+    {
+        for (int x=0; x<arr.length-1 ; x++ )
+        {
+            for(int y=x+1; y<arr.length; y++)
+            {
+                if(arr[x]>arr[y])
+                {
+                    swap(arr,x,y);
+                }
+            }
+        }
+    }
+    /**
+    给int数组进行冒泡排序。
+    @param arr 接收一个int类型的数组。
+    */
+    public static void bubbleSort(int[] arr)
+    {
+        for (int x=0; x<arr.length-1 ; x++ )
+        {
+            for(int y=0; y<arr.length-x-1; y++)
+            {
+                if(arr[y]>arr[y+1])
+                {
+                    swap(arr,y,y+1);
+                }
+            }
+        }
+    }
+    /**
+    给数组中元素进行位置的置换。
+    @param arr  接收一个int类型的数组。
+    @param a 要置换的位置 
+    @param b 要置换的位置 
+    */
+    private  static void swap(int[] arr,int a,int b)
+    {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+    /**
+    用于打印数组中的元素。打印形式是：[elemet1, element2, ...]
+    */
+    public static void printArray(int[] arr)
+    {
+        System.out.print("[");
+        for(int x=0; x<arr.length; x++)
+        {
+            if(x!=arr.length-1)
+                System.out.print(arr[x]+", ");
+            else
+                System.out.println(arr[x]+"]");
+        }
+    }
 }
 
 
@@ -283,6 +281,142 @@ public class ArrayTool
 如果类没有被public修饰，那么默认的构造函数，也没有public修饰。
 
 默认构造构造函数的权限是随着的类的变化而变化的。
+*/
+```
+
+#### 静态代码块
+
+```
+/*
+静态代码块。
+格式：
+static
+{
+	静态代码块中的执行语句。
+}
+
+特点：随着类的加载而执行，只执行一次,并优先于主函数。
+用于给类进行初始化的。
+
+*/
+
+class StaticCode
+{
+	int num = 9;
+	StaticCode()
+	{
+		System.out.println("b");
+	}
+
+	static
+	{
+		System.out.println("a");
+	}
+	{
+		System.out.println("c"+this.num);
+	}
+
+	StaticCode(int x)
+	{
+		System.out.println("d");
+	}
+	public static void show()
+	{
+		System.out.println("show run");
+	}
+}
+
+class StaticCodeDemo 
+{
+	static
+	{
+		//System.out.println("b");
+	}
+	public static void main(String[] args) 
+	{
+		new StaticCode(4);//a c d 
+		//new StaticCode();
+		//new StaticCode();
+		//System.out.println("over");
+		//StaticCode.show();
+		//StaticCode s = null;
+		//s = new StaticCode();
+
+		//StaticCode.show();
+
+
+	}
+	static
+	{
+		///System.out.println("c");
+	}
+}
+//d:\>java0217\day06>java StaticCodeDemo
+//b c a over
+```
+
+#### 对象的初始化过程
+
+```
+class Person
+{
+	private Person(){}
+	private String name = "hah";
+	private int age;
+	private static  String country = "cn";
+	Person(String name,int age)
+	{
+		this.name = name;
+		this.age = age;
+	}
+	
+	{
+		System.out.println(name+".."+age);
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	public void speak()
+	{
+		System.out.println(this.name+"..."+this.age);
+	}
+
+	public static void  showCountry()
+	{
+		System.out.println("country="+Person.country);
+		Person.method();
+	}
+	public static void method()
+	{
+		System.out.println("method run");
+	}
+
+}
+
+class  PersonDemo
+{
+	public static void main(String[] args) 
+	{
+		Person p = new Person("zhangsan",20);
+		p.setName("lisi");
+		new Person();
+	}
+}
+/*
+Person p = new Person("zhangsan",20);
+
+该句话都做了什么事情？
+1，因为new用到了Person.class.所以会先找到Person.class文件并加载到内存中。
+2，执行该类中的static代码块，如果有的话，给Person.class类进行初始化。
+3，在堆内存中开辟空间，分配内存地址。
+4，在堆内存中建立对象的特有属性。并进行默认初始化。
+5，对属性进行显示初始化。
+6，对对象进行构造代码块初始化。
+7，对对象进行对应的构造函数初始化。
+8，将内存地址付给栈内存中的p变量。
+
 */
 ```
 
