@@ -292,7 +292,7 @@ public class ArrayTool
 格式：
 static
 {
-	静态代码块中的执行语句。
+    静态代码块中的执行语句。
 }
 
 特点：随着类的加载而执行，只执行一次,并优先于主函数。
@@ -302,54 +302,54 @@ static
 
 class StaticCode
 {
-	int num = 9;
-	StaticCode()
-	{
-		System.out.println("b");
-	}
+    int num = 9;
+    StaticCode()
+    {
+        System.out.println("b");
+    }
 
-	static
-	{
-		System.out.println("a");
-	}
-	{
-		System.out.println("c"+this.num);
-	}
+    static
+    {
+        System.out.println("a");
+    }
+    {
+        System.out.println("c"+this.num);
+    }
 
-	StaticCode(int x)
-	{
-		System.out.println("d");
-	}
-	public static void show()
-	{
-		System.out.println("show run");
-	}
+    StaticCode(int x)
+    {
+        System.out.println("d");
+    }
+    public static void show()
+    {
+        System.out.println("show run");
+    }
 }
 
 class StaticCodeDemo 
 {
-	static
-	{
-		//System.out.println("b");
-	}
-	public static void main(String[] args) 
-	{
-		new StaticCode(4);//a c d 
-		//new StaticCode();
-		//new StaticCode();
-		//System.out.println("over");
-		//StaticCode.show();
-		//StaticCode s = null;
-		//s = new StaticCode();
+    static
+    {
+        //System.out.println("b");
+    }
+    public static void main(String[] args) 
+    {
+        new StaticCode(4);//a c d 
+        //new StaticCode();
+        //new StaticCode();
+        //System.out.println("over");
+        //StaticCode.show();
+        //StaticCode s = null;
+        //s = new StaticCode();
 
-		//StaticCode.show();
+        //StaticCode.show();
 
 
-	}
-	static
-	{
-		///System.out.println("c");
-	}
+    }
+    static
+    {
+        ///System.out.println("c");
+    }
 }
 //d:\>java0217\day06>java StaticCodeDemo
 //b c a over
@@ -360,49 +360,49 @@ class StaticCodeDemo
 ```
 class Person
 {
-	private Person(){}
-	private String name = "hah";
-	private int age;
-	private static  String country = "cn";
-	Person(String name,int age)
-	{
-		this.name = name;
-		this.age = age;
-	}
-	
-	{
-		System.out.println(name+".."+age);
-	}
-	public void setName(String name)
-	{
-		this.name = name;
-	}
+    private Person(){}
+    private String name = "hah";
+    private int age;
+    private static  String country = "cn";
+    Person(String name,int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
 
-	public void speak()
-	{
-		System.out.println(this.name+"..."+this.age);
-	}
+    {
+        System.out.println(name+".."+age);
+    }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
-	public static void  showCountry()
-	{
-		System.out.println("country="+Person.country);
-		Person.method();
-	}
-	public static void method()
-	{
-		System.out.println("method run");
-	}
+    public void speak()
+    {
+        System.out.println(this.name+"..."+this.age);
+    }
+
+    public static void  showCountry()
+    {
+        System.out.println("country="+Person.country);
+        Person.method();
+    }
+    public static void method()
+    {
+        System.out.println("method run");
+    }
 
 }
 
 class  PersonDemo
 {
-	public static void main(String[] args) 
-	{
-		Person p = new Person("zhangsan",20);
-		p.setName("lisi");
-		new Person();
-	}
+    public static void main(String[] args) 
+    {
+        Person p = new Person("zhangsan",20);
+        p.setName("lisi");
+        new Person();
+    }
 }
 /*
 Person p = new Person("zhangsan",20);
@@ -418,6 +418,142 @@ Person p = new Person("zhangsan",20);
 8，将内存地址付给栈内存中的p变量。
 
 */
+```
+
+#### 单例设计模式
+
+```
+/*
+设计模式：解决某一类问题最行之有效的方法。
+java中23种设计模式：
+单例设计模式：解决一个类在内存只存在一个对象。
+
+
+想要保证对象唯一。
+1，为了避免其他程序过多建立该类对象。先禁止其他程序建立该类对象
+2，还为了让其他程序可以访问到该类对象，只好在本类中，自定义一个对象。
+3，为了方便其他程序对自定义对象的访问，可以对外提供一些访问方式。
+
+这三部怎么用代码体现呢？
+1，将构造函数私有化。
+2，在类中创建一个本类对象。
+3，提供一个方法可以获取到该对象。
+
+
+
+对于事物该怎么描述，还怎么描述。
+当需要将该事物的对象保证在内存中唯一时，就将以上的三步加上即可。
+
+
+*/
+
+class Single
+{
+
+
+	private  Single(){}
+
+	private static Single s = new Single();
+
+	public static  Single getInstance()
+	{
+		return s;
+	}
+}
+
+
+class SingleDemo 
+{
+	public static void main(String[] args) 
+	{
+		Single s1 = Single.getInstance();
+		Single s2 = Single.getInstance();
+
+		s1.setNum(23);
+
+		System.out.println(s2.getNum());
+
+	}
+}
+
+
+
+class Student
+{
+	private int age;
+
+
+	private static Student s = new Student();
+	private Student(){}
+	public static Student getStudent()
+	{
+		return s;
+	}
+
+
+
+	public void setAge(int age)
+	{
+		this.age = age;
+	}
+	public int getAge()
+	{
+		return age;
+	}
+}
+
+
+```
+
+#### 饿汉式与懒汉式
+
+```
+/*
+这个是先初始化对象。
+称为：饿汉式。
+
+Single类一进内存，就已经创建好了对象。
+class Single
+{
+	private static Single s = new Single();
+	private Single(){}
+	public static Single getInstance()
+	{
+		return s;
+	}
+}
+*/
+
+//对象是方法被调用时，才初始化，也叫做对象的延时加载。称为：懒汉式。
+//Single类进内存，对象还没有存在，只有调用了getInstance方法时，才建立对象。
+class Single
+{
+	private static Single s = null;
+	private Single(){}
+	public static Single getInstance()
+	{
+		if(s==null)
+		{
+			synchronized(Single.class)
+			{				
+				if(s==null)
+					s = new Single();
+			}
+		}
+		return s;
+	}
+}
+
+//记录原则：定义单例，建议使用饿汉式。
+
+class  
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}
+
 ```
 
 #### main函数
