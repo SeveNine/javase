@@ -84,6 +84,49 @@ class  StaticDemo
 }
 ```
 
+#### 什么时候使用static关键字
+
+```
+/*
+什么使用静态？
+
+要从两方面下手：
+因为静态修饰的内容有成员变量和函数。
+什么时候定义静态变量(类变量)呢？
+当对象中出现共享数据时，该数据被静态所修饰。
+对象中的特有数据要定义成非静态存在于堆内存中。
+
+什么时候定义静态函数呢？
+
+当功能内部没有访问到肺静态数据(对象的特有数据)，
+那么该功能可以定义成静态的。
+
+*/
+class Person
+{
+	String name;
+	static String country = "cn";
+	public  static void show()
+	{
+		System.out.println(contry+"haha");	
+	}
+
+}
+
+
+class  
+{
+	public static void main(String[] args) 
+	{
+		Person p = new Person();
+		p.show();
+		//Person.show();
+	}
+
+}
+
+```
+
 #### main函数
 
 ```
@@ -106,13 +149,13 @@ jvm在调用主函数时，传入的是new String[0];
 
 class MainDemo 
 {
-	public static void main(String[] args)//new String[]
-	{
-		String[] arr = {"hah","hhe","heihei","xixi","hiahia"};
+    public static void main(String[] args)//new String[]
+    {
+        String[] arr = {"hah","hhe","heihei","xixi","hiahia"};
 
-		MainTest.main(arr);
-		//往下面的主函数传值，开发没人写两个入口
-	}
+        MainTest.main(arr);
+        //往下面的主函数传值，开发没人写两个入口
+    }
 }
 
 //String[] args = new String[3];
@@ -121,11 +164,11 @@ class MainDemo
 
 class MainTest
 {
-	public static void main(String[] args)
-	{
-		for(int x=0; x<args.length; x++)
-			System.out.println(args[x]);
-	}
+    public static void main(String[] args)
+    {
+        for(int x=0; x<args.length; x++)
+            System.out.println(args[x]);
+    }
 }
 ```
 
