@@ -92,15 +92,15 @@ return x+y;
 
 //返回三个整数的和
 
- int add\(int x,int y,int z\)
+   int add\(int x,int y,int z\)
 
- {
+   {
 
 ```
 return x+y+z;
 ```
 
- }
+   }
 
 //返回两个小数的和
 
