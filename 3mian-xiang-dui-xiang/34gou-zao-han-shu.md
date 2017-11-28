@@ -59,7 +59,7 @@ class Person
         System.out.println("A: name="+name+",,age="+age);
 
     }
-    //构造函数的重载，带自己起的名字的人
+    //构造函数的重载，带自定义名字的人
     Person(String n)
     {
         name = n;
