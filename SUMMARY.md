@@ -23,5 +23,5 @@
   * [3.4构造函数](3mian-xiang-dui-xiang/34gou-zao-han-shu.md)
   * [3.5this关键字](3mian-xiang-dui-xiang/35thisguan-jian-zi.md)
   * [3.6static关键字（多）](3mian-xiang-dui-xiang/36staticguan-jian-zi.md)
-  * [3.7继承的概念](41ji-cheng-de-gai-nian.md)
+  * [3.7继承](41ji-cheng-de-gai-nian.md)
 

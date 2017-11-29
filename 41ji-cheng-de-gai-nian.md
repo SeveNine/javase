@@ -53,20 +53,20 @@ Java支持多层继承\(继承体系\)
 必须是类与类之间有所属关系才可以继承。所属关系 is a。
 class C
 {
-	void demo1(){}
+    void demo1(){}
 }
 
 
 class A extends C
 {
-	//void demo1(){}
-	void demo2(){}
+    //void demo1(){}
+    void demo2(){}
 }
 
 class B extends C
 {
-	//void demo1(){}
-	void demo3(){}
+    //void demo1(){}
+    void demo3(){}
 }
 
 Java语言中：java只支持单继承，不支持多继承。
@@ -94,17 +94,17 @@ java支持多层继承。也就是一个继承体系
 下面例子就存在安全隐患
 class A
 {
-	void show()
-	{
-		System.out.println("a");
-	}
+    void show()
+    {
+        System.out.println("a");
+    }
 }
 class B
 {
-	void show()
-	{
-		System.out.println("b");
-	}
+    void show()
+    {
+        System.out.println("b");
+    }
 }
 
 class C extends A,B
@@ -128,34 +128,81 @@ c.show();
 
 class Person
 {
-	String name;
-	int age;
+    String name;
+    int age;
 
 }
 class Student extends Person
 {
-		void study()
-	{
-		System.out.println("good study");
-	}
+        void study()
+    {
+        System.out.println("good study");
+    }
 }
 
 class Worker extends Person
 {
-	void work()
-	{
-		System.out.println("good work");
-	}
+    void work()
+    {
+        System.out.println("good work");
+    }
 }
 
 
 
 class ExtendsDemo 
 {
+    public static void main(String[] args) 
+    {
+        Student s = new Student();
+        s.name = "zhagnsan";
+    }
+}
+```
+
+#### 子父类中变量的特点
+
+```
+/*
+子父类出现后，类成员的特点：
+
+类中成员：
+1，变量。
+2，函数。
+3，构造函数。
+
+1,变量
+如果子类中出现非私有的同名成员变量时，
+子类要访问本类中的变量，用this
+子类要访问父类中的同名变量，用super。
+
+super的使用和this的使用几乎一致。
+this代表的是本类对象的引用。
+super代表的是父类对象的引用。
+
+*/
+
+class Fu 
+{
+	public int num = 4;
+}
+
+class Zi extends Fu
+{
+	int num = 5;
+	void show()
+	{
+		System.out.println(this.num+"+"+super.num);
+	}
+}
+
+class  ExtendsDemo2
+{
 	public static void main(String[] args) 
 	{
-		Student s = new Student();
-		s.name = "zhagnsan";
+		Zi z = new Zi();
+		z.show();
+		//System.out.println(z.num+"...."+z.num);
 	}
 }
 
