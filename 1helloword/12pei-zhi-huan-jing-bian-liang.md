@@ -34,6 +34,8 @@ PATH  = %JAVA\_HOME%\bin;
 
 %变量名%，为动态获取某一环境变量的值。
 
+windows中路径一般为\，linux、unix中路径一般为/
+
 因为PATH和CLASSPATH都使用到了JAVA\_HOME，也可以使用绝对路径，两者皆可。
 
 在doc中直接打指令set path=xxx为临时配置环境变量，只在当前窗口有效。
