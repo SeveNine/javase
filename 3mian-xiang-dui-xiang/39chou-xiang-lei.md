@@ -12,7 +12,7 @@
 2，抽象方法和抽象类都必须被abstract关键字修饰。
 3，抽象类不可以用new创建对象。因为调用抽象方法没意义。
 4，抽象类中的抽象方法要被使用，必须由子类复写其所有的抽象方法后，建立子类对象调用。
-	如果子类只覆盖了部分抽象方法，那么该子类还是一个抽象类。
+    如果子类只覆盖了部分抽象方法，那么该子类还是一个抽象类。
 
 
 抽象类和一般类没有太大的不同。
@@ -32,9 +32,9 @@
 abstract 关键字，和哪些关键字不能共存。
 final：被final修饰的类不能有子类。而被abstract修饰的类一定是一个父类。
 private: 抽象类中的私有的抽象方法，不被子类所知，就无法被复写。
-		而抽象方法出现的就是需要被复写。
+        而抽象方法出现的就是需要被复写。
 static：如果static可以修饰抽象方法，那么连对象都省了，直接类名调用就可以了。
-		可是抽象方法运行没意义。
+        可是抽象方法运行没意义。
 
 
 
@@ -45,48 +45,47 @@ static：如果static可以修饰抽象方法，那么连对象都省了，直�
 
 abstract class Student
 {
-	abstract final void study();
-	//abstract void study1();
-	void sleep()
-	{
-		System.out.println("躺着");
-	}
+    abstract final void study();
+    //abstract void study1();
+    void sleep()
+    {
+        System.out.println("躺着");
+    }
 }
 /*
 
 class ChongCiStudent extends Student
 {
-	void study()
-	{
-		System.out.println("chongci study");
-	}
+    void study()
+    {
+        System.out.println("chongci study");
+    }
 }
 
 class BaseStudent extends Student
 {
-	void study()
-	{
-		System.out.println("base study");
-	}
+    void study()
+    {
+        System.out.println("base study");
+    }
 }
 
 class AdvStudent extends Student
 {
-	void study()
-	{
-		System.out.println("adv study");
-	}
+    void study()
+    {
+        System.out.println("adv study");
+    }
 }
 */
 class AbstractDemo 
 {
-	public static void main(String[] args) 
-	{
-		//new Student();不可以
-		//new BaseStudent().study();
-	}
+    public static void main(String[] args) 
+    {
+        //new Student();不可以
+        //new BaseStudent().study();
+    }
 }
-
 ```
 
 #### 抽象类练习
@@ -107,18 +106,18 @@ class AbstractDemo
 
 class Employee//打工者
 {
-	private String name;
-	private String id;
-	private double pay;
+    private String name;
+    private String id;
+    private double pay;
 
-	Employee(String name,String id,double pay)
-	{
-		this.name = name;
-		this.id = id;
-		this.pay = pay;
-	}
-	
-	public abstract void work();
+    Employee(String name,String id,double pay)
+    {
+        this.name = name;
+        this.id = id;
+        this.pay = pay;
+    }
+
+    public abstract void work();
 
 }
 
@@ -126,28 +125,28 @@ class Employee//打工者
 
 class Manager extends Employee//经理
 {
-	private int bonus;
-	Manager(String name,String id,double pay,int bonus)
-	{
-		super(name,id,pay);
-		this.bonus = bonus;
-	}
-	public void work()
-	{
-		System.out.println("manager work");
-	}
+    private int bonus;
+    Manager(String name,String id,double pay,int bonus)
+    {
+        super(name,id,pay);
+        this.bonus = bonus;
+    }
+    public void work()
+    {
+        System.out.println("manager work");
+    }
 }
 
 class Pro extends Employee//普通员工
 {
-	Pro(String name,String id,double pay)
-	{
-		super(name,id,pay);
-	}
-	public void work()
-	{
-		System.out.println("pro work");
-	}
+    Pro(String name,String id,double pay)
+    {
+        super(name,id,pay);
+    }
+    public void work()
+    {
+        System.out.println("pro work");
+    }
 }
 
 
@@ -155,12 +154,15 @@ class Pro extends Employee//普通员工
 
 class  
 {
-	public static void main(String[] args) 
-	{
-		System.out.println("Hello World!");
-	}
-}
+    public static void main(String[] args) 
+    {
+        Pro a=new Pro(zhangsan,123,2000);
+        a.work();
+        Manager b=new Manager(zhangsan,123,2000);
+        b.work();
 
+    }
+}
 ```
 
 
