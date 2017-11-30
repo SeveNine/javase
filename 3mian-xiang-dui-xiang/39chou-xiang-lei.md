@@ -158,7 +158,7 @@ class
     {
         Pro a=new Pro(zhangsan,123,2000);
         a.work();
-        Manager b=new Manager(zhangsan,123,2000);
+        Manager b=new Manager(lisi,233,2500,500);
         b.work();
 
     }
