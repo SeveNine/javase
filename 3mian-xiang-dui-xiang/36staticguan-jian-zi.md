@@ -451,58 +451,56 @@ class Single
 {
 
 
-	private  Single(){}
+    private  Single(){}
 
-	private static Single s = new Single();
+    private static Single s = new Single();
 
-	public static  Single getInstance()
-	{
-		return s;
-	}
+    public static  Single getInstance()
+    {
+        return s;
+    }
 }
 
 
 class SingleDemo 
 {
-	public static void main(String[] args) 
-	{
-		Single s1 = Single.getInstance();
-		Single s2 = Single.getInstance();
+    public static void main(String[] args) 
+    {
+        Single s1 = Single.getInstance();
+        Single s2 = Single.getInstance();
 
-		s1.setNum(23);
+        s1.setNum(23);
 
-		System.out.println(s2.getNum());
+        System.out.println(s2.getNum());
 
-	}
+    }
 }
 
 
 
 class Student
 {
-	private int age;
+    private int age;
 
 
-	private static Student s = new Student();
-	private Student(){}
-	public static Student getStudent()
-	{
-		return s;
-	}
+    private static Student s = new Student();
+    private Student(){}
+    public static Student getStudent()
+    {
+        return s;
+    }
 
 
 
-	public void setAge(int age)
-	{
-		this.age = age;
-	}
-	public int getAge()
-	{
-		return age;
-	}
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+    public int getAge()
+    {
+        return age;
+    }
 }
-
-
 ```
 
 #### 饿汉式与懒汉式
@@ -515,12 +513,12 @@ class Student
 Single类一进内存，就已经创建好了对象。
 class Single
 {
-	private static Single s = new Single();
-	private Single(){}
-	public static Single getInstance()
-	{
-		return s;
-	}
+    private static Single s = new Single();
+    private Single(){}
+    public static Single getInstance()
+    {
+        return s;
+    }
 }
 */
 
@@ -528,32 +526,31 @@ class Single
 //Single类进内存，对象还没有存在，只有调用了getInstance方法时，才建立对象。
 class Single
 {
-	private static Single s = null;
-	private Single(){}
-	public static Single getInstance()
-	{
-		if(s==null)
-		{
-			synchronized(Single.class)
-			{				
-				if(s==null)
-					s = new Single();
-			}
-		}
-		return s;
-	}
+    private static Single s = null;
+    private Single(){}
+    public static Single getInstance()
+    {
+        if(s==null)
+        {
+            synchronized(Single.class)
+            {                
+                if(s==null)
+                    s = new Single();
+            }
+        }
+        return s;
+    }
 }
 
 //记录原则：定义单例，建议使用饿汉式。
 
 class  
 {
-	public static void main(String[] args) 
-	{
-		System.out.println("Hello World!");
-	}
+    public static void main(String[] args) 
+    {
+        System.out.println("Hello World!");
+    }
 }
-
 ```
 
 #### main函数

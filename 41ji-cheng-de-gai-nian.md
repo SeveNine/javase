@@ -207,7 +207,7 @@ class  ExtendsDemo2
 }
 ```
 
-#### 子父类中函数的特点（重写）
+#### 子父类中函数的特点（重写） \(Override\)
 
 ```
 /*
@@ -326,73 +326,70 @@ super():会访问父类中空参数的构造函数。而且子类中所有的构
 */
 class Fu //extends Object
 {
-	int num ;
-	Fu()
-	{
-		//super();这个里面继承的是object
-		num= 60;
-		System.out.println("fu run");
-	}
-	Fu(int  x)
-	{
-		System.out.println("fu ...."+x);
-	}
-	
+    int num ;
+    Fu()
+    {
+        //super();这个里面继承的是object
+        num= 60;
+        System.out.println("fu run");
+    }
+    Fu(int  x)
+    {
+        System.out.println("fu ...."+x);
+    }
+
 }
 
 class Zi extends Fu
 {
-	Zi()
-	{
-		
-		super();  
-		//super(4);
-		System.out.println("zi run");
-	}
-	Zi(int x)
-	{
-		this();
-		//super();
-		//super(3);如果父类中没有空参数构造函数可以手动指定
-		System.out.println("zi..."+x);
-	}
+    Zi()
+    {
+
+        super();  
+        //super(4);
+        System.out.println("zi run");
+    }
+    Zi(int x)
+    {
+        this();
+        //super();
+        //super(3);如果父类中没有空参数构造函数可以手动指定
+        System.out.println("zi..."+x);
+    }
 }
 
 class  ExtendsDemo4
 {
-	public static void main(String[] args) 
-	{
-		Zi z = new Zi(0);
-		System.out.println(z.num);
-	}
+    public static void main(String[] args) 
+    {
+        Zi z = new Zi(0);
+        System.out.println(z.num);
+    }
 }
 
 /*
 class Person
 {
-	private  String name;
-	Person(String name)
-	{
-		this.name = name;
-	}
+    private  String name;
+    Person(String name)
+    {
+        this.name = name;
+    }
 
-	void show(){}
+    void show(){}
 }
 class Student extends Person
 {
-	Student(String name)
-	{
-		super(name);//直接调用父类的构造函数
-	}
-	void method()
-	{
-		super.show();
-	}
+    Student(String name)
+    {
+        super(name);//直接调用父类的构造函数
+    }
+    void method()
+    {
+        super.show();
+    }
 }
 */
-
-
-
 ```
 
 
