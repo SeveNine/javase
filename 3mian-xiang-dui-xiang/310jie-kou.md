@@ -136,6 +136,7 @@ interface Study
 }
 class wangwu extends Sport implements Study
 {
+    void play(){}
 }
 //定义在类中是必须有的，接口是不在一个体系中可有可无的
 ```
