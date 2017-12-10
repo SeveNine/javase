@@ -25,24 +25,22 @@
 	多态的出现大大的提高程序的扩展性。
 
 4，多态的弊端：
-	提高了扩展性，但是只能使用父类的引用访问父类中的成员。
+	虽然提高了扩展性，但是只能使用父类的引用访问父类中的成员。
 
 5，多态的应用
 
+6，多态的出现代码中的特点(多态使用的注意事项)
 
 
+
+
+第二个问题：如何使用子类特有方法。
 */
 
 /*
 动物，
 猫，狗。
 */
-
-abstract class Animal
-{
-	abstract void eat();
-
-}
 
 class Cat extends Animal
 {
@@ -85,55 +83,68 @@ class Pig extends Animal
 //-----------------------------------------
 
 
-class DuoTaiDemo 
+class DuoTaiDemo2 
 {
 	public static void main(String[] args) 
 	{
-		//Cat c = new Cat();
-		//c.eat();
+		//Animal a = new Cat();//类型提升。 向上转型。
+		//a.eat();
 
-		//Dog d = new Dog();
-		//d.eat();
-		//Cat c = new Cat();
+		//如果想要调用猫的特有方法时，如何操作？
+		//强制将父类的引用。转成子类类型。向下转型。
+		///Cat c = (Cat)a;
+		//c.catchMouse();
+		//千万不要出现这样的操作，就是将父类对象转成子类类型。
+		//我们能转换的是父类应用指向了自己的子类对象时，该应用可以被提升，也可以被强制转换。
+		//多态自始至终都是子类对象在做着变化。
+//		Animal a = new Animal();
+//		Cat c = (Cat)a;
+		
+
 		/*
-		Cat c1 = new Cat();
-		function(c1);
+		毕姥爷 x = new 毕老师();
 
-		function(new Dog());
-		function(new Pig());
+		x.讲课();
+
+		毕老师 y = (毕老师)x;
+
+
+		y.看电影();
 		*/
-
-		//Animal c = new Cat();
-		//c.eat();
-
-		
-		function(new Cat());
 		function(new Dog());
-		function(new Pig());
-		
+		function(new Cat());
 
-		
+
 	}
 	public static void function(Animal a)//Animal a = new Cat();
 	{
 		a.eat();
-		//a.catchMouse();
-	}
-	/*
-	public static void function(Cat c)//
-	{
-		c.eat();
-	}
-	public static void function(Dog d)
-	{
-		d.eat();
-	}
+		/*
+		if(a instanceof Animal)
+		{
+			System.out.println("haha");
+		}
+		else 
+		*/
+		if(a instanceof Cat)
+		{
+			Cat c = (Cat)a;
+			c.catchMouse();
+		}
+		else if(a instanceof Dog)
+		{
+			Dog c = (Dog)a;
+			c.kanJia();
+		}
 
-	public static void function(Pig p)
-	{
-		p.eat();
+
+		/*
+		instanceof : 用于判断对象的类型。 对象 intanceof 类型(类类型 接口类型)  
+		*/
+	
 	}
-	*/
+	
+
 
 }
 
