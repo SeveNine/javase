@@ -154,64 +154,64 @@ class DuoTaiDemo2
 ```
 class Fu
 {
-	static int num = 5;
-	void method1()
-	{
-		System.out.println("fu method_1");
-	}
-	void method2()
-	{
-		System.out.println("fu method_2");
-	}
-	static void method4()
-	{
-		System.out.println("fu method_4");
-	}
+    static int num = 5;
+    void method1()
+    {
+        System.out.println("fu method_1");
+    }
+    void method2()
+    {
+        System.out.println("fu method_2");
+    }
+    static void method4()
+    {
+        System.out.println("fu method_4");
+    }
 }
 
 
 class Zi extends Fu
 {
-	static int num = 8;
-	void method1()
-	{
-		System.out.println("zi method_1");
-	}
-	void method3()
-	{
-		System.out.println("zi method_3");
-	}
+    static int num = 8;
+    void method1()
+    {
+        System.out.println("zi method_1");
+    }
+    void method3()
+    {
+        System.out.println("zi method_3");
+    }
 
-	static void method4()
-	{
-		System.out.println("zi method_4");
-	}
+    static void method4()
+    {
+        System.out.println("zi method_4");
+    }
 }
 class  DuoTaiDemo4
 {
-	public static void main(String[] args) 
-	{
-		
-//		Fu f = new Zi();
+    public static void main(String[] args) 
+    {
+
+//        Fu f = new Zi();
 //
-//		System.out.println(f.num);
+//        System.out.println(f.num);
 //
-//		Zi z = new Zi();
-//		System.out.println(z.num);
+//        Zi z = new Zi();
+//        System.out.println(z.num);
 
-		//f.method1();
-		//f.method2();
-		//f.method3();
+        //f.method1();
+        //f.method2();
+        //f.method3();
 
-		Fu f = new Zi();
-		System.out.println(f.num);
-		f.method4();
+        Fu f = new Zi();
+        System.out.println(f.num);
+        f.method4();
 
-		Zi z = new Zi();
-		z.method4();
+        Zi z = new Zi();
+        z.method4();
 
-	
-		
+
+
 /*
 在多态中成员函数的特点：
 在编译时期：参阅引用型变量所属的类中是否有调用的方法。如果有，编译通过，如果没有编译失败。
@@ -230,12 +230,112 @@ class  DuoTaiDemo4
 */
 
 
-//		Zi z = new Zi();
-//		z.method1();
-//		z.method2();
-//		z.method3();
+//        Zi z = new Zi();
+//        z.method1();
+//        z.method2();
+//        z.method3();
+    }
+}
+```
+
+#### 多态举例
+
+```
+/*
+需求：
+电脑运行实例，
+电脑运行基于主板。
+*/
+
+
+interface PCI
+{
+	public void open();
+	public void close();
+}
+
+class MainBoard
+{
+	public void run()
+	{
+		System.out.println("mainboard run ");
 	}
-}	
+	public void usePCI(PCI p)//PCI p = new NetCard()//接口型引用指向自己的子类对象。
+	{
+		if(p!=null)
+		{
+			p.open();
+			p.close();
+			
+		}
+	}
+}
+
+
+class NetCard implements PCI
+{
+	public void open()
+	{
+		System.out.println("netcard open");
+	}
+	public void close()
+	{
+		System.out.println("netcard close");
+		method();
+	}
+	
+}
+class SoundCard implements PCI
+{
+	public void open()
+	{
+		System.out.println("SoundCard open");
+	}
+	public void close()
+	{
+		System.out.println("SoundCard close");
+	}
+}
+/*
+不可拆卸的主板，耦合性很强
+class MainBoard 
+{
+	public void run()
+	{
+		System.out.println("mainboard run");
+	}
+	public void useNetCard(NetCard c)
+	{
+		c.open();
+		c.close();
+	}
+}
+
+class NetCard
+{
+	public void open()
+	{
+		System.out.println("netcard open");
+	}
+	public void close()
+	{
+		System.out.println("netcard close");
+	}
+}
+*/
+
+class DuoTaiDemo5 
+{
+	public static void main(String[] args) 
+	{
+		MainBoard mb = new MainBoard();
+		mb.run();
+		mb.usePCI(null);
+		mb.usePCI(new NetCard());
+		mb.usePCI(new SoundCard());
+		
+	}
+}
 
 ```
 
