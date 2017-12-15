@@ -360,7 +360,7 @@ class Demo //extends Object
     {
         this.num = num;
     }
-
+    //重写部分函数
     public boolean equals(Object obj)//Object obj = new Demo();
     {
 
